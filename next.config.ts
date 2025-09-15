@@ -1,9 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Force Webpack instead of Turbopack
+  // ✅ This forces Webpack instead of Turbopack
   experimental: {
-    webpackBuildWorker: true, // ✅ use webpack, avoids turbopack bug
+    webpackBuildWorker: true,
+    turbo: {
+      rules: {}, // must be an object, not boolean
+    },
   },
   typescript: {
     ignoreBuildErrors: false,
