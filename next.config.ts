@@ -1,19 +1,17 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Force Webpack instead of Turbopack
   experimental: {
-    turbo: false, // disable Turbopack (use stable Webpack instead)
+    webpackBuildWorker: true, // ✅ use webpack, avoids turbopack bug
   },
   typescript: {
-    ignoreBuildErrors: false, // set true only if TS errors block build
+    ignoreBuildErrors: false,
   },
   eslint: {
-    ignoreDuringBuilds: true, // prevent eslint errors from breaking prod build
+    ignoreDuringBuilds: true,
   },
-  images: {
-    domains: ["localhost"], // add your image domains if needed
-  },
-  reactStrictMode: true, // recommended
+  reactStrictMode: true,
 };
 
 export default nextConfig;
