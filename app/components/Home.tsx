@@ -4,7 +4,6 @@ import Services from './Home/Services/Services'
 import Work from './Home/Work/Work'
 import Skills from './Home/Skillls/Skill'
 import  Contact  from './Home/Contact/Contact'
-import Folder from './Home/Footer/Footer'
 import Footer from './Home/Footer/Footer'
 const Home = () => {
   return (

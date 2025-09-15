@@ -1,9 +1,8 @@
 "use client";
 
 import {motion} from 'framer-motion'
- 
+import dynamic from "next/dynamic";
 import {useState} from 'react'
-import {Swiper,SwiperSlide} from 'swiper/react'
 import 'swiper/css'
 import { BsArrowUpRight,BsGithub } from 'react-icons/bs';
 import {Tooltip,TooltipContent,TooltipProvider,TooltipTrigger} from '@/components/ui/tooltip'
@@ -11,6 +10,14 @@ import Link from 'next/link';
 import Image from 'next/image';
 import WorkSliderBtns from './WorkSliderBtns'
 import { Images } from 'lucide-react';
+
+const Swiper = dynamic(() => import("swiper/react").then((mod) => mod.Swiper), {
+  ssr: false,
+});
+const SwiperSlide = dynamic(
+  () => import("swiper/react").then((mod) => mod.SwiperSlide),
+  { ssr: false }
+);
 
 const projects = [
     {
@@ -164,4 +171,4 @@ const Work = () => {
   )
 }
 
-export default Work
+export default Work
