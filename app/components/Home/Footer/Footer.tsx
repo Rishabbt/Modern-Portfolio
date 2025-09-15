@@ -16,7 +16,7 @@ const Footer = () => {
          </div></h1>
          
     </div>
-    <p className='text-gray-400 mt-6 text-base sm:text-lg flex justify-center'>&copy; 2025 YourWebsite. All rights reserved.</p>
+    <p className='text-gray-400 mt-6 text-base sm:text-lg flex justify-center'>2025 YourWebsite. All rights reserved.</p>
     </div>
   )
 }

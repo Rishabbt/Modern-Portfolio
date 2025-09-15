@@ -11,8 +11,8 @@ const Hero = () => {
   <ParticlesHero />
 
         <div className='relative z-10 flex-col item-center'>
-            {/* <Image src="" alt="Profile pic"  width={150} height={150} */}
-            {/* className = " bg-black rounded-full border-8 border-{#00c0c48aa}" /> */}
+             <Image src="/images/s1.jpg" alt="Profile pic"  width={150} height={150} 
+             className = " bg-black rounded-full border-8 border-{#00c0c48aa}" /> 
         </div>
         <h1 className='text-2xl sm:text-4xl md:text-5xl lg:text-6xl mt-6 text-centre font-bold tracking-wide'>Creating web products,<br></br>brands,<span className='text-red-600'>  and experiences.</span>
            </h1>
